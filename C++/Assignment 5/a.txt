@@ -1,0 +1,14 @@
+Eugene		91.7
+Spokane		241.5
+Salem		44.2
+Olympia		83.8
+Seattle		112.3
+Yakima		103.7
+Corvallis	71.8
+Coos_Bay	148.2
+Newport		86.5
+Astoria		63.5
+Klamath_Falls	209.3
+Redmond		100.9
+Boise		298.2
+Medford		193.2

@@ -1,0 +1,82 @@
+
+//Zachary A Trudo
+//Assignment 5
+//Sources: None
+
+#include <iostream>    //cin, cout
+#include <fstream>      //ifstream, .peek(), .eof()
+#include <string>         //strings
+#include <iomanip>     //setprecision()
+
+using namespace std;
+
+
+int main()
+{
+    ifstream inputFile;
+    double milesToDest, flightHours, gallonsBurned,
+           fuelRemaining, airplaneSpeed, gallonsCarried, gallonsPerHour;
+    string destination, inputFileName;
+    char yesNo, peeked;
+    bool stillGoing = true;
+    int i;
+
+    cout << fixed <<  setprecision(2);
+
+    while (stillGoing)      // Loop running throguh entire file.
+    {
+        /*
+            Input, asking for filename and different airplane variables.
+        */
+        cout << "What is the name of the file: " << endl;
+        cin >> inputFileName;
+        cout << "What is the speed of your airplane." << endl;
+        cin >> airplaneSpeed;
+        cout << "How much fuel is the airplane carrying." << endl;
+        cin >> gallonsCarried;
+        cout << "How much fuled does your airplane burn per hour?" << endl;
+        cin >> gallonsPerHour;
+
+
+        inputFile.open("a.txt");
+        if (!inputFile.is_open())
+        {
+            cout << "File did not open";
+        }
+        else
+        {
+            cout << "The total time the airplane can fly is " << gallonsCarried / gallonsPerHour <<
+                " hours, and can fly " << gallonsCarried / gallonsPerHour * airplaneSpeed << " miles." << endl;
+            cout << setfill('-') << setw(50) << " " << endl;
+            cout << "123456789012345678901234567890123456789012345678901234567890" << endl;
+            cout << setfill(' ') << setw(15) <<  left << "Name" << setw(10) << "Distance" <<  setw(15) << "Flight Hours" <<
+                setw(17) << "Gallons Burned" << setw(15) << "Fuel Remaining" << endl;
+
+            while (true)            // Loop runs through each  variable and gives the appropriate output.
+            {
+                inputFile >> destination >> milesToDest;
+                if (inputFile.eof())
+                {
+                    break;
+                }
+                flightHours = milesToDest / airplaneSpeed;
+                gallonsBurned = flightHours * gallonsPerHour;
+                fuelRemaining = gallonsCarried - gallonsBurned;
+                cout << left << setw(15) << destination << right << setw(8) << milesToDest << setw(15) << flightHours << setw(17) << gallonsBurned << setw(15) << fuelRemaining << endl;
+            }
+        }
+
+
+        cout << "Do you want to continue? (y/n)";
+        cin >> yesNo;
+        if (yesNo == 'n' || yesNo == 'N')
+        {
+            stillGoing = false;
+        }
+
+        inputFile.close();
+
+    }
+
+    return 0;
+}

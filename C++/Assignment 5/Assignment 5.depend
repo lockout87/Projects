@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1382528735 source:g:\projects\c++\assignment 5\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<iomanip>
+

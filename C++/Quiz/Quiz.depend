@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1381466335 source:g:\projects\c++\quiz\main.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	<fstream>
+	<sstream>
+	<cmath>
+

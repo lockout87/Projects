@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1377137564 source:g:\projects\c++\test\main.cpp
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<string>
+	<algorithm>
+	<vector>
+	<iostream>
+	<sstream>
+

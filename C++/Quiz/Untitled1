@@ -1,0 +1,64 @@
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <fstream>
+#include <sstream>
+#include <cmath>
+
+using namespace std;
+
+int getNum()
+{
+    int num;
+    cout << "Please enter any positive number: ";
+    cin >> num;
+     if (num < 0)
+    {
+        cout << "This number is less than 0, please try again." << endl;
+        num = getNum();
+    }
+    return num;
+}
+
+bool posNum (int num)
+{
+    if (num%2 == 0)
+    {
+        return true;
+    }
+    return false;
+}
+
+bool divisible(int num)
+{
+    for (int i = 1; i <= sqrt(num); i+=2)
+    {
+        if (num % i == 0)
+        {
+            return false;
+        }
+    }
+}
+
+
+int main()
+{
+    int num;
+    num = getNum();
+    if (posNum(num))
+    {
+        cout << "This number is not a prime number.";
+    }
+    else if (divisible(num))
+    {
+        cout <<  "This number is not a prime number.";
+    }
+    else
+    {
+        cout << "This number is prime!";
+    }
+
+    return 0;
+}
+

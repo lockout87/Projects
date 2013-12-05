@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1383981661 source:g:\projects\c++\assignment 7\fileops.cpp
+	"CDCollection.h"
+
+1383982396 g:\projects\c++\assignment 7\cdcollection.h
+	<iostream>
+	<list>
+	<fstream>
+	<string>
+
+1383987840 source:g:\projects\c++\assignment 7\main.cpp
+	"CDCollection.h"
+
+1383987606 source:g:\projects\c++\assignment 7\searches.cpp
+	"CDCollection.h"
+
+1383982419 source:g:\projects\c++\assignment 7\sorts.cpp
+	"CDCollection.h"
+
